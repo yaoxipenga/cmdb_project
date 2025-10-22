@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑服务器</title>
+</head>
+<body>
+<h2>编辑服务器</h2>
+<form method="POST" action="{{ url_for('server_edit', server_id=server.id) }}">
+    主机名: <input type="text" name="hostname" value="{{ server.hostname }}"><br>
+    IP: <input type="text" name="ip" value="{{ server.ip }}"><br>
+    操作系统: <input type="text" name="os_type" value="{{ server.os_type }}"><br>
+    描述: <input type="text" name="desc" value="{{ server.desc }}"><br>
+    <input type="submit" value="保存">
+</form>
+<a href="{{ url_for('server_list') }}">返回列表</a>
+</body>
+</html>

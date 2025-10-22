@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加服务器</title>
+</head>
+<body>
+<h2>添加服务器</h2>
+<form method="POST">
+    主机名: <input type="text" name="hostname"><br>
+    IP: <input type="text" name="ip"><br>
+    操作系统: <input type="text" name="os_type"><br>
+    描述: <input type="text" name="desc"><br>
+    <input type="submit" value="添加">
+</form>
+<a href="{{ url_for('server_list') }}">返回列表</a>
+</body>
+</html>
